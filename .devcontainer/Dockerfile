@@ -26,3 +26,9 @@ ENV SHELL /bin/bash
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
 CMD ["/bin/bash"]
+
+# Source the ROS 2 distro
+RUN echo 'source /opt/ros/humble/setup.bash' >> /home/$USERNAME/.bashrc
+
+# Conditionally source workspace setup if it exists
+RUN echo '[ -f /home/ros2_ws/install/setup.bash ] && source /home/ros2_ws/install/setup.bash' >> /home/$USERNAME/.bashrc
