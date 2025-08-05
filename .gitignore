@@ -1,0 +1,48 @@
+# === ROS 2 build artifacts ===
+build/
+install/
+log/
+.colcon/
+*.pyc
+__pycache__/
+
+# === ROS 2 launch/config/log files ===
+*.log
+*.log.*
+*.db
+*.rviz
+*.launch.pyc
+
+# === VS Code devcontainer / IDE files ===
+.vscode/
+.devcontainer/.env
+*.code-workspace
+
+# === CMake & catkin/ament tools ===
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# === Python / setup tools ===
+*.egg-info/
+dist/
+*.egg
+*.pyd
+*.pyo
+
+# === Temporary files ===
+*.swp
+*.bak
+*.tmp
+*.~ 
+*~
+
+# === Environment-specific files ===
+.env
+*.local
+*.DS_Store
+Thumbs.db
+
+# === Docker volumes / containers (optional) ===
+docker-compose.override.yml
